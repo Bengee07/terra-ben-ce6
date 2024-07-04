@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "b" {
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name              = aws_s3_bucket.b.bucket_regional_domain_name
+    domain_name              = "sctp-staticwebsite-files.s3.ap-southeast-1.amazonaws.com"
     origin_id                = "ben_origin"
   }
 
